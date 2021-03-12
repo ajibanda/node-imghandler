@@ -52,7 +52,7 @@ exports.downloadPicture = (req, res) => {
 			res.status(200).send({code: 1, data: result})
 		})
 		.catch((err) => {
-			res.status(200).send({code: 0, data: "Image could not be found" })
+			res.status(200).send({code: 0, data: "", message: "Image could not be found" })
 		});
 	
 }
