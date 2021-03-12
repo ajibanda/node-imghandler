@@ -49,10 +49,10 @@ exports.downloadPicture = (req, res) => {
 	console.log(filepath);
 	imageDataUri.encodeFromFile(filepath)
 		.then((result) => {
-			res.status(200).send({data: result})
+			res.status(200).send({code: 1, data: result})
 		})
 		.catch((err) => {
-			res.status(400).send({data: "something went wrong" })
+			res.status(200).send({code: 0, data: "Image could not be found" })
 		});
 	
 }
